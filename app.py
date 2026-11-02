@@ -16,7 +16,7 @@ import time
 import http.cookies
 import urllib.parse
 import urllib.request
-from concurrent.futures import ThreadPoolExecutor, wait
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -35,12 +35,13 @@ LIVE_NAMES = {x["name"].casefold() for x in LIVE_COMPANIES}
 DIRECTORY_COMPANIES = LIVE_COMPANIES + [{**x,"vendor":"external","company_type":"Multinational"} for x in MAJOR_EMPLOYERS.get("companies",[]) if x["name"].casefold() not in LIVE_NAMES]
 BOARD_CACHE = {}
 BOARD_CACHE_LOCK = threading.Lock()
+SCAN_NEXT_INDEX = {}
+SCAN_LOCK = threading.Lock()
 BOARD_CACHE_TTL = 15 * 60
 BOARD_CACHE_TTL_SECONDS = BOARD_CACHE_TTL
 BOARD_REQUEST_TIMEOUT = 3
 BOARD_MAX_RESPONSE_BYTES = 2_500_000
 BOARD_WORKERS = 16
-SEARCH_TIME_BUDGET_SECONDS = 18
 DATA_DIR = Path(os.getenv("CAREER_SIGNAL_DATA_DIR", str(ROOT))).expanduser()
 TREND_HISTORY_PATH = DATA_DIR / "market_history.json"
 TREND_HISTORY_LOCK = threading.Lock()
@@ -118,7 +119,8 @@ def fetch_board(source, force=False, role=None):
     now = time.monotonic()
     with BOARD_CACHE_LOCK:
         cached = BOARD_CACHE.get(key)
-        if cached and not force and now - cached["cached_at"] < BOARD_CACHE_TTL_SECONDS:
+        cached_ttl = BOARD_CACHE_TTL_SECONDS if cached and cached.get("ok") else 120
+        if cached and not force and now - cached["cached_at"] < cached_ttl:
             return cached
     request = urllib.request.Request(board_endpoint(source), headers={"Accept":"application/json","User-Agent":"CareerSignal/1.0 (public employer job-board reader)"})
     try:
@@ -133,11 +135,10 @@ def fetch_board(source, force=False, role=None):
         result = {"ok":True,"jobs":jobs,"cached_at":time.monotonic(),"checked_at":datetime.now(timezone.utc).isoformat()}
     except Exception as exc:
         result = {"ok":False,"jobs":[],"cached_at":time.monotonic(),"checked_at":datetime.now(timezone.utc).isoformat(),"error":str(exc)[:180]}
-    if result["ok"]:
-        with BOARD_CACHE_LOCK:
-            if len(BOARD_CACHE) >= 4000:
-                BOARD_CACHE.pop(next(iter(BOARD_CACHE)))
-            BOARD_CACHE[key] = result
+    with BOARD_CACHE_LOCK:
+        if len(BOARD_CACHE) >= 4000:
+            BOARD_CACHE.pop(next(iter(BOARD_CACHE)))
+        BOARD_CACHE[key] = result
     return result
 
 COUNTRY_NAMES = {"in":["india"],"us":["united states","usa","u.s."],"gb":["united kingdom","uk","great britain"],"ca":["canada"],"au":["australia"],"de":["germany"],"fr":["france"],"nl":["netherlands"],"sg":["singapore"],"za":["south africa"]}
@@ -291,34 +292,51 @@ def location_matches(job, location, country):
 
 def search_jobs(role="Data Analyst", location="India", country="in", page=1, results=50, force=False):
     sources = SOURCE_REGISTRY.get("companies", [])
+    role_key = (role or "").strip().casefold()
+    if not sources:
+        raise RuntimeError("No live employer feeds are configured.")
+    with SCAN_LOCK:
+        if force:
+            with BOARD_CACHE_LOCK:
+                for key in [key for key in BOARD_CACHE if len(key) > 2 and key[2] == role_key]:
+                    BOARD_CACHE.pop(key, None)
+            SCAN_NEXT_INDEX[role_key] = 0
+        start = SCAN_NEXT_INDEX.get(role_key, 0)
+        if start >= len(sources):
+            start = 0
+        end = min(len(sources), start + BOARD_WORKERS)
+        batch = sources[start:end]
+        SCAN_NEXT_INDEX[role_key] = end
+        # Fetch one bounded group per request. The browser requests the next group while
+        # the progress indicator stays visible, keeping the free instance responsive.
+        with ThreadPoolExecutor(max_workers=BOARD_WORKERS) as pool:
+            futures = [pool.submit(fetch_board, source, force, role) for source in batch]
+            for future in futures:
+                try:
+                    future.result()
+                except Exception:
+                    pass
+    cache_now = time.monotonic()
     gathered = []
     good_sources = set()
     feed_times = []
-    failed_sources = []
-    # Search the feeds in parallel, but stop before the host's request and memory limits.
-    pool = ThreadPoolExecutor(max_workers=BOARD_WORKERS)
-    futures = {pool.submit(fetch_board, source, force, role):source for source in sources}
-    done, pending = wait(futures, timeout=SEARCH_TIME_BUDGET_SECONDS)
-    for future in done:
-        source = futures[future]
-        try:
-            feed = future.result()
-        except Exception:
-            failed_sources.append(source)
+    checked_sources = set()
+    with BOARD_CACHE_LOCK:
+        cached_feeds = {key: value for key, value in BOARD_CACHE.items() if len(key) > 2 and key[2] == role_key and cache_now - value["cached_at"] < (BOARD_CACHE_TTL_SECONDS if value.get("ok") else 120)}
+    for source in sources:
+        key = (source["vendor"], source["slug"], role_key)
+        feed = cached_feeds.get(key)
+        if feed is None:
             continue
+        checked_sources.add((source["vendor"], source["slug"]))
         if not feed["ok"]:
-            if "HTTP Error 404" not in feed.get("error", ""):
-                failed_sources.append(source)
             continue
         good_sources.add((source["vendor"], source["slug"]))
         feed_times.append(feed["checked_at"])
         gathered.extend(feed["jobs"])
-    for future in pending:
-        future.cancel()
-    pool.shutdown(wait=False, cancel_futures=True)
-    failures=len(done)-len(good_sources)
-    if not good_sources and sources:
-        raise RuntimeError("Could not reach the employer career feeds. Check your internet connection and try refreshing.")
+    checked_count = len(checked_sources)
+    failures = checked_count - len(good_sources)
+    scan_complete = checked_count >= len(sources)
     matches = [job for job in gathered if role_matches(job, role) and location_matches(job, location, country)]
     unique = {}
     for job in matches:
@@ -327,15 +345,15 @@ def search_jobs(role="Data Analyst", location="India", country="in", page=1, res
     matches = list(unique.values())
     matches.sort(key=lambda j: j.get("created", ""), reverse=True)
     checked_at = datetime.now(timezone.utc).isoformat()
-    note = f"Live postings read from {len(good_sources)} of {len(sources)} employer boards. Links open the employer's hosted posting. Remote listings without an eligible country may need confirmation on the employer page."
+    note = f"Live postings read from {len(good_sources)} of {len(sources)} employer boards ({checked_count}/{len(sources)} checked). Links open the employer's hosted posting."
     if not matches:
-        note = f"No open {role} postings matched {location} across {len(good_sources)} reachable employer boards. Try another role or location."
+        note = (f"No open {role} postings matched {location} yet; the live scan is still running." if not scan_complete else f"No open {role} postings matched {location} across {len(good_sources)} reachable employer boards. Try another role or location.")
     if failures:
-        note += f" {failures} completed feeds could not be reached on this refresh."
-    if pending:
-        note += f" {len(pending)} boards were still responding; refresh shortly to pick up additional results."
+        note += f" {failures} checked feeds could not be reached."
+    if not scan_complete:
+        note += " Checking the next group automatically."
     feed_updated_at=min(feed_times) if feed_times else checked_at
-    return {"jobs":matches[:results],"_analysis_jobs":matches,"total":len(matches),"source":"employer_boards","source_count":len(sources),"boards_checked":len(good_sources),"updated_at":feed_updated_at,"notice":note}
+    return {"jobs":matches[:results],"_analysis_jobs":matches,"total":len(matches),"source":"employer_boards","source_count":len(sources),"boards_checked":len(good_sources),"scan_checked":checked_count,"scan_complete":scan_complete,"updated_at":feed_updated_at,"notice":note}
 
 def analyze_market(role="Data Analyst", location="India", country="in", user_skills=None, weeks=6, force=False):
     result=search_jobs(role,location,country,results=12,force=force)
