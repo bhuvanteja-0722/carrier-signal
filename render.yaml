@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: career-signal
+    runtime: python
+    region: singapore
+    plan: free
+    buildCommand: python -m compileall -q app.py
+    startCommand: python app.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: CAREER_SIGNAL_DATA_DIR
+        value: /var/data
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
+      - key: PYTHON_VERSION
+        value: 3.12.8

@@ -1,0 +1,1609 @@
+{
+  "count": 200,
+  "verified_at": "2026-11-02",
+  "source": "LastRound AI ATS Company Directory, Aug 2026 snapshot (CC BY 4.0), independently checked against public employer ATS feeds on 2026-11-02",
+  "source_url": "https://github.com/fyrosofttech/lastroundai-hiring-data/tree/main/ats-directory",
+  "license": "CC-BY-4.0",
+  "companies": [
+    {
+      "name": "Airbnb",
+      "vendor": "greenhouse",
+      "slug": "airbnb",
+      "job_count_at_catalog_check": 201,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/airbnb"
+    },
+    {
+      "name": "Airtable",
+      "vendor": "greenhouse",
+      "slug": "airtable",
+      "job_count_at_catalog_check": 5,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/airtable"
+    },
+    {
+      "name": "Anthropic",
+      "vendor": "greenhouse",
+      "slug": "anthropic",
+      "job_count_at_catalog_check": 673,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/anthropic"
+    },
+    {
+      "name": "Asana",
+      "vendor": "greenhouse",
+      "slug": "asana",
+      "job_count_at_catalog_check": 110,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/asana"
+    },
+    {
+      "name": "Applied Engineering",
+      "vendor": "greenhouse",
+      "slug": "appliedengineering",
+      "job_count_at_catalog_check": 28,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/appliedengineering"
+    },
+    {
+      "name": "Automattic Careers",
+      "vendor": "greenhouse",
+      "slug": "automatticcareers",
+      "job_count_at_catalog_check": 12,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/automatticcareers"
+    },
+    {
+      "name": "Axon",
+      "vendor": "greenhouse",
+      "slug": "axon",
+      "job_count_at_catalog_check": 471,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/axon"
+    },
+    {
+      "name": "Cloudflare",
+      "vendor": "greenhouse",
+      "slug": "cloudflare",
+      "job_count_at_catalog_check": 467,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/cloudflare"
+    },
+    {
+      "name": "Cohere",
+      "vendor": "ashby",
+      "slug": "cohere",
+      "job_count_at_catalog_check": 121,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/cohere"
+    },
+    {
+      "name": "cursor",
+      "vendor": "ashby",
+      "slug": "cursor",
+      "job_count_at_catalog_check": 124,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/cursor"
+    },
+    {
+      "name": "Databricks",
+      "vendor": "greenhouse",
+      "slug": "databricks",
+      "job_count_at_catalog_check": 912,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/databricks"
+    },
+    {
+      "name": "Datadog",
+      "vendor": "greenhouse",
+      "slug": "datadog",
+      "job_count_at_catalog_check": 397,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/datadog"
+    },
+    {
+      "name": "Discord",
+      "vendor": "greenhouse",
+      "slug": "discord",
+      "job_count_at_catalog_check": 41,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/discord"
+    },
+    {
+      "name": "Dropbox",
+      "vendor": "greenhouse",
+      "slug": "dropbox",
+      "job_count_at_catalog_check": 24,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/dropbox"
+    },
+    {
+      "name": "Duolingo",
+      "vendor": "greenhouse",
+      "slug": "duolingo",
+      "job_count_at_catalog_check": 56,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/duolingo"
+    },
+    {
+      "name": "ElevenLabs",
+      "vendor": "ashby",
+      "slug": "elevenlabs",
+      "job_count_at_catalog_check": 141,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/elevenlabs"
+    },
+    {
+      "name": "Epic Kids Inc.",
+      "vendor": "greenhouse",
+      "slug": "epickids",
+      "job_count_at_catalog_check": 7,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/epickids"
+    },
+    {
+      "name": "Figma",
+      "vendor": "greenhouse",
+      "slug": "figma",
+      "job_count_at_catalog_check": 140,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/figma"
+    },
+    {
+      "name": "GitLab",
+      "vendor": "greenhouse",
+      "slug": "gitlab",
+      "job_count_at_catalog_check": 238,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/gitlab"
+    },
+    {
+      "name": "HubSpot",
+      "vendor": "greenhouse",
+      "slug": "hubspotjobs",
+      "job_count_at_catalog_check": 82,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/hubspotjobs"
+    },
+    {
+      "name": "Indeed",
+      "vendor": "greenhouse",
+      "slug": "indeed",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/indeed"
+    },
+    {
+      "name": "lyft",
+      "vendor": "greenhouse",
+      "slug": "lyft",
+      "job_count_at_catalog_check": 170,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/lyft"
+    },
+    {
+      "name": "mongodb",
+      "vendor": "greenhouse",
+      "slug": "mongodb",
+      "job_count_at_catalog_check": 365,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/mongodb"
+    },
+    {
+      "name": "okta",
+      "vendor": "greenhouse",
+      "slug": "okta",
+      "job_count_at_catalog_check": 387,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/okta"
+    },
+    {
+      "name": "OpenAI",
+      "vendor": "ashby",
+      "slug": "openai",
+      "job_count_at_catalog_check": 811,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/openai"
+    },
+    {
+      "name": "Palantir Technologies",
+      "vendor": "lever",
+      "slug": "palantir",
+      "job_count_at_catalog_check": 301,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/palantir"
+    },
+    {
+      "name": "Perplexity",
+      "vendor": "ashby",
+      "slug": "perplexity",
+      "job_count_at_catalog_check": 138,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/perplexity"
+    },
+    {
+      "name": "pinterest",
+      "vendor": "greenhouse",
+      "slug": "pinterest",
+      "job_count_at_catalog_check": 170,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/pinterest"
+    },
+    {
+      "name": "Plaid",
+      "vendor": "ashby",
+      "slug": "plaid",
+      "job_count_at_catalog_check": 134,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/plaid"
+    },
+    {
+      "name": "Ramp",
+      "vendor": "ashby",
+      "slug": "ramp",
+      "job_count_at_catalog_check": 172,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/ramp"
+    },
+    {
+      "name": "Reddit",
+      "vendor": "greenhouse",
+      "slug": "reddit",
+      "job_count_at_catalog_check": 163,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/reddit"
+    },
+    {
+      "name": "Replit",
+      "vendor": "ashby",
+      "slug": "replit",
+      "job_count_at_catalog_check": 34,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/replit"
+    },
+    {
+      "name": "roblox",
+      "vendor": "greenhouse",
+      "slug": "roblox",
+      "job_count_at_catalog_check": 268,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/roblox"
+    },
+    {
+      "name": "samsara",
+      "vendor": "greenhouse",
+      "slug": "samsara",
+      "job_count_at_catalog_check": 340,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/samsara"
+    },
+    {
+      "name": "Scale AI",
+      "vendor": "greenhouse",
+      "slug": "scaleai",
+      "job_count_at_catalog_check": 170,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/scaleai"
+    },
+    {
+      "name": "AI Squared",
+      "vendor": "greenhouse",
+      "slug": "aisquared",
+      "job_count_at_catalog_check": 8,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/aisquared"
+    },
+    {
+      "name": "Snowflake",
+      "vendor": "ashby",
+      "slug": "snowflake",
+      "job_count_at_catalog_check": 369,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/snowflake"
+    },
+    {
+      "name": "SpaceX",
+      "vendor": "greenhouse",
+      "slug": "spacex",
+      "job_count_at_catalog_check": 2874,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/spacex"
+    },
+    {
+      "name": "Spotify",
+      "vendor": "lever",
+      "slug": "spotify",
+      "job_count_at_catalog_check": 88,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/spotify"
+    },
+    {
+      "name": "Stripe",
+      "vendor": "greenhouse",
+      "slug": "stripe",
+      "job_count_at_catalog_check": 746,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/stripe"
+    },
+    {
+      "name": "Supabase",
+      "vendor": "ashby",
+      "slug": "supabase",
+      "job_count_at_catalog_check": 68,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/supabase"
+    },
+    {
+      "name": "Twilio",
+      "vendor": "greenhouse",
+      "slug": "twilio",
+      "job_count_at_catalog_check": 132,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/twilio"
+    },
+    {
+      "name": "Vercel",
+      "vendor": "greenhouse",
+      "slug": "vercel",
+      "job_count_at_catalog_check": 91,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/vercel"
+    },
+    {
+      "name": "waymo",
+      "vendor": "greenhouse",
+      "slug": "waymo",
+      "job_count_at_catalog_check": 372,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/waymo"
+    },
+    {
+      "name": "Webflow",
+      "vendor": "greenhouse",
+      "slug": "webflow",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/webflow"
+    },
+    {
+      "name": "Zapier",
+      "vendor": "ashby",
+      "slug": "zapier",
+      "job_count_at_catalog_check": 11,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/zapier"
+    },
+    {
+      "name": "zoominfo",
+      "vendor": "greenhouse",
+      "slug": "zoominfo",
+      "job_count_at_catalog_check": 99,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/zoominfo"
+    },
+    {
+      "name": "Zscaler",
+      "vendor": "greenhouse",
+      "slug": "zscaler",
+      "job_count_at_catalog_check": 363,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/zscaler"
+    },
+    {
+      "name": "1Password",
+      "vendor": "ashby",
+      "slug": "1password",
+      "job_count_at_catalog_check": 87,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/1password"
+    },
+    {
+      "name": "Affirm",
+      "vendor": "greenhouse",
+      "slug": "affirm",
+      "job_count_at_catalog_check": 240,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/affirm"
+    },
+    {
+      "name": "Agoda",
+      "vendor": "greenhouse",
+      "slug": "agoda",
+      "job_count_at_catalog_check": 311,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/agoda"
+    },
+    {
+      "name": "Anduril Industries",
+      "vendor": "greenhouse",
+      "slug": "andurilindustries",
+      "job_count_at_catalog_check": 2565,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/andurilindustries"
+    },
+    {
+      "name": "Benchling",
+      "vendor": "ashby",
+      "slug": "benchling",
+      "job_count_at_catalog_check": 55,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/benchling"
+    },
+    {
+      "name": "Betterment",
+      "vendor": "greenhouse",
+      "slug": "betterment",
+      "job_count_at_catalog_check": 27,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/betterment"
+    },
+    {
+      "name": "Block",
+      "vendor": "greenhouse",
+      "slug": "block",
+      "job_count_at_catalog_check": 204,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/block"
+    },
+    {
+      "name": "Box",
+      "vendor": "greenhouse",
+      "slug": "boxinc",
+      "job_count_at_catalog_check": 122,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/boxinc"
+    },
+    {
+      "name": "Brex",
+      "vendor": "greenhouse",
+      "slug": "brex",
+      "job_count_at_catalog_check": 263,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/brex"
+    },
+    {
+      "name": "Canonical",
+      "vendor": "greenhouse",
+      "slug": "canonical",
+      "job_count_at_catalog_check": 314,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/canonical"
+    },
+    {
+      "name": "Carta",
+      "vendor": "greenhouse",
+      "slug": "carta",
+      "job_count_at_catalog_check": 75,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/carta"
+    },
+    {
+      "name": "Celonis",
+      "vendor": "greenhouse",
+      "slug": "celonis",
+      "job_count_at_catalog_check": 236,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/celonis"
+    },
+    {
+      "name": "Checkr",
+      "vendor": "greenhouse",
+      "slug": "checkr",
+      "job_count_at_catalog_check": 40,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/checkr"
+    },
+    {
+      "name": "Chime Financial, Inc",
+      "vendor": "greenhouse",
+      "slug": "chime",
+      "job_count_at_catalog_check": 75,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/chime"
+    },
+    {
+      "name": "CloudKitchens",
+      "vendor": "greenhouse",
+      "slug": "css",
+      "job_count_at_catalog_check": 30,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/css"
+    },
+    {
+      "name": "Cloudinary",
+      "vendor": "lever",
+      "slug": "cloudinary",
+      "job_count_at_catalog_check": 11,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/cloudinary"
+    },
+    {
+      "name": "Cockroach Labs",
+      "vendor": "greenhouse",
+      "slug": "cockroachlabs",
+      "job_count_at_catalog_check": 12,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/cockroachlabs"
+    },
+    {
+      "name": "Confluent",
+      "vendor": "ashby",
+      "slug": "confluent",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/confluent"
+    },
+    {
+      "name": "Deel",
+      "vendor": "ashby",
+      "slug": "deel",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/deel"
+    },
+    {
+      "name": "Elastic",
+      "vendor": "greenhouse",
+      "slug": "elastic",
+      "job_count_at_catalog_check": 407,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/elastic"
+    },
+    {
+      "name": "Faire",
+      "vendor": "greenhouse",
+      "slug": "faire",
+      "job_count_at_catalog_check": 67,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/faire"
+    },
+    {
+      "name": "Fastly",
+      "vendor": "greenhouse",
+      "slug": "fastly",
+      "job_count_at_catalog_check": 51,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/fastly"
+    },
+    {
+      "name": "Glean",
+      "vendor": "greenhouse",
+      "slug": "gleanwork",
+      "job_count_at_catalog_check": 127,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/gleanwork"
+    },
+    {
+      "name": "instacart",
+      "vendor": "greenhouse",
+      "slug": "instacart",
+      "job_count_at_catalog_check": 94,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/instacart"
+    },
+    {
+      "name": "Kraken",
+      "vendor": "lever",
+      "slug": "kraken123",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/kraken123"
+    },
+    {
+      "name": "klaviyo",
+      "vendor": "greenhouse",
+      "slug": "klaviyo",
+      "job_count_at_catalog_check": 156,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/klaviyo"
+    },
+    {
+      "name": "Meesho",
+      "vendor": "lever",
+      "slug": "meesho",
+      "job_count_at_catalog_check": 49,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/meesho"
+    },
+    {
+      "name": "Mistral AI",
+      "vendor": "lever",
+      "slug": "mistral",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/mistral"
+    },
+    {
+      "name": "AI Alignment Foundation (AIAF)",
+      "vendor": "greenhouse",
+      "slug": "aiaf",
+      "job_count_at_catalog_check": 2,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/aiaf"
+    },
+    {
+      "name": "Notion",
+      "vendor": "ashby",
+      "slug": "notion",
+      "job_count_at_catalog_check": 148,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/notion"
+    },
+    {
+      "name": "Robinhood",
+      "vendor": "greenhouse",
+      "slug": "robinhood",
+      "job_count_at_catalog_check": 160,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/robinhood"
+    },
+    {
+      "name": "thoughtworks",
+      "vendor": "greenhouse",
+      "slug": "thoughtworks",
+      "job_count_at_catalog_check": 42,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/thoughtworks"
+    },
+    {
+      "name": "toast",
+      "vendor": "greenhouse",
+      "slug": "toast",
+      "job_count_at_catalog_check": 331,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/toast"
+    },
+    {
+      "name": "CRED",
+      "vendor": "lever",
+      "slug": "cred",
+      "job_count_at_catalog_check": 14,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/cred"
+    },
+    {
+      "name": "Freshworks",
+      "vendor": "lever",
+      "slug": "freshworks",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/freshworks"
+    },
+    {
+      "name": "Groww",
+      "vendor": "greenhouse",
+      "slug": "groww",
+      "job_count_at_catalog_check": 9,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/groww"
+    },
+    {
+      "name": "InMobi",
+      "vendor": "greenhouse",
+      "slug": "inmobi",
+      "job_count_at_catalog_check": 80,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/inmobi"
+    },
+    {
+      "name": "Mindtickle",
+      "vendor": "lever",
+      "slug": "mindtickle",
+      "job_count_at_catalog_check": 19,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/mindtickle"
+    },
+    {
+      "name": "Razorpay Software Private Limited",
+      "vendor": "greenhouse",
+      "slug": "razorpaysoftwareprivatelimited",
+      "job_count_at_catalog_check": 30,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited"
+    },
+    {
+      "name": "Paytm",
+      "vendor": "lever",
+      "slug": "paytm",
+      "job_count_at_catalog_check": 201,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/paytm"
+    },
+    {
+      "name": "slice",
+      "vendor": "greenhouse",
+      "slug": "slice",
+      "job_count_at_catalog_check": 23,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/slice"
+    },
+    {
+      "name": "tcs",
+      "vendor": "greenhouse",
+      "slug": "tcs",
+      "job_count_at_catalog_check": 95,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/tcs"
+    },
+    {
+      "name": "Zeta",
+      "vendor": "lever",
+      "slug": "zeta",
+      "job_count_at_catalog_check": 31,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/zeta"
+    },
+    {
+      "name": "Navi AI",
+      "vendor": "ashby",
+      "slug": "navi",
+      "job_count_at_catalog_check": 2,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.ashbyhq.com/navi"
+    },
+    {
+      "name": "AI Security Institute",
+      "vendor": "greenhouse",
+      "slug": "aisi",
+      "job_count_at_catalog_check": 8,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/aisi"
+    },
+    {
+      "name": "Qonto",
+      "vendor": "lever",
+      "slug": "qonto",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/qonto"
+    },
+    {
+      "name": "DroneDeploy",
+      "vendor": "lever",
+      "slug": "dronedeploy",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/dronedeploy"
+    },
+    {
+      "name": "Janes",
+      "vendor": "greenhouse",
+      "slug": "janes",
+      "job_count_at_catalog_check": 9,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/janes"
+    },
+    {
+      "name": "unybrands",
+      "vendor": "greenhouse",
+      "slug": "unybrands",
+      "job_count_at_catalog_check": 36,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/unybrands"
+    },
+    {
+      "name": "UATX",
+      "vendor": "lever",
+      "slug": "uaustin",
+      "job_count_at_catalog_check": 16,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/uaustin"
+    },
+    {
+      "name": "JamLoop",
+      "vendor": "lever",
+      "slug": "jam-loop",
+      "job_count_at_catalog_check": 6,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/jam-loop"
+    },
+    {
+      "name": "Weave",
+      "vendor": "greenhouse",
+      "slug": "weave",
+      "job_count_at_catalog_check": 3,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/weave"
+    },
+    {
+      "name": "motivity",
+      "vendor": "greenhouse",
+      "slug": "motivity",
+      "job_count_at_catalog_check": 2,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/motivity"
+    },
+    {
+      "name": "dLocal",
+      "vendor": "lever",
+      "slug": "dlocal",
+      "job_count_at_catalog_check": 28,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/dlocal"
+    },
+    {
+      "name": "SynMax",
+      "vendor": "lever",
+      "slug": "synmax",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/synmax"
+    },
+    {
+      "name": "qventus",
+      "vendor": "greenhouse",
+      "slug": "qventus",
+      "job_count_at_catalog_check": 17,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/qventus"
+    },
+    {
+      "name": "Aypa Power",
+      "vendor": "greenhouse",
+      "slug": "aypapower",
+      "job_count_at_catalog_check": 13,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/aypapower"
+    },
+    {
+      "name": "parkland",
+      "vendor": "greenhouse",
+      "slug": "parkland",
+      "job_count_at_catalog_check": 2,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/parkland"
+    },
+    {
+      "name": "upriteconstruction",
+      "vendor": "greenhouse",
+      "slug": "upriteconstruction",
+      "job_count_at_catalog_check": 28,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/upriteconstruction"
+    },
+    {
+      "name": "linqia",
+      "vendor": "greenhouse",
+      "slug": "linqia",
+      "job_count_at_catalog_check": 22,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/linqia"
+    },
+    {
+      "name": "Amca",
+      "vendor": "greenhouse",
+      "slug": "amca",
+      "job_count_at_catalog_check": 54,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/amca"
+    },
+    {
+      "name": "Flex",
+      "vendor": "greenhouse",
+      "slug": "flex",
+      "job_count_at_catalog_check": 25,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/flex"
+    },
+    {
+      "name": "Numeris",
+      "vendor": "lever",
+      "slug": "numeris",
+      "job_count_at_catalog_check": 7,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/numeris"
+    },
+    {
+      "name": "Regent",
+      "vendor": "greenhouse",
+      "slug": "regent",
+      "job_count_at_catalog_check": 10,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/regent"
+    },
+    {
+      "name": "NABIS",
+      "vendor": "greenhouse",
+      "slug": "nabis",
+      "job_count_at_catalog_check": 18,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/nabis"
+    },
+    {
+      "name": "ClearPoint",
+      "vendor": "lever",
+      "slug": "clearpoint",
+      "job_count_at_catalog_check": 4,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/clearpoint"
+    },
+    {
+      "name": "nightingale-college",
+      "vendor": "greenhouse",
+      "slug": "nightingalecollege",
+      "job_count_at_catalog_check": 8,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/nightingalecollege"
+    },
+    {
+      "name": "Virtual Preparatory Academy of Washington",
+      "vendor": "greenhouse",
+      "slug": "vpawashington",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/vpawashington"
+    },
+    {
+      "name": "vesalius",
+      "vendor": "greenhouse",
+      "slug": "vesalius",
+      "job_count_at_catalog_check": 3,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/vesalius"
+    },
+    {
+      "name": "ChowNow",
+      "vendor": "lever",
+      "slug": "chownow",
+      "job_count_at_catalog_check": 15,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/chownow"
+    },
+    {
+      "name": "kuraoncology",
+      "vendor": "greenhouse",
+      "slug": "kuraoncology",
+      "job_count_at_catalog_check": 10,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/kuraoncology"
+    },
+    {
+      "name": "DataKind",
+      "vendor": "greenhouse",
+      "slug": "datakindinc",
+      "job_count_at_catalog_check": 3,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/datakindinc"
+    },
+    {
+      "name": "FoundersCard",
+      "vendor": "lever",
+      "slug": "founderscard",
+      "job_count_at_catalog_check": 7,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/founderscard"
+    },
+    {
+      "name": "Collibra",
+      "vendor": "greenhouse",
+      "slug": "collibra",
+      "job_count_at_catalog_check": 18,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/collibra"
+    },
+    {
+      "name": "Focus Partners Australia & Escala Partners",
+      "vendor": "greenhouse",
+      "slug": "focuspartnersaustralia",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/focuspartnersaustralia"
+    },
+    {
+      "name": "Ezra",
+      "vendor": "greenhouse",
+      "slug": "ezra",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/ezra"
+    },
+    {
+      "name": "omnicomhealth",
+      "vendor": "greenhouse",
+      "slug": "omnicomhealth",
+      "job_count_at_catalog_check": 13,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/omnicomhealth"
+    },
+    {
+      "name": "Kidsnet",
+      "vendor": "greenhouse",
+      "slug": "kidsnet",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/kidsnet"
+    },
+    {
+      "name": "N2 Co / Franchise External",
+      "vendor": "greenhouse",
+      "slug": "franchise",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/franchise"
+    },
+    {
+      "name": "METR",
+      "vendor": "lever",
+      "slug": "metr",
+      "job_count_at_catalog_check": 7,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/metr"
+    },
+    {
+      "name": "Quilted Health",
+      "vendor": "lever",
+      "slug": "quilted-health",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/quilted-health"
+    },
+    {
+      "name": "Fair Trade Real Estate",
+      "vendor": "lever",
+      "slug": "FairTradeRealEstate",
+      "job_count_at_catalog_check": 5,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/FairTradeRealEstate"
+    },
+    {
+      "name": "Golden Hippo",
+      "vendor": "greenhouse",
+      "slug": "goldenhippo",
+      "job_count_at_catalog_check": 11,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/goldenhippo"
+    },
+    {
+      "name": "Astera Labs",
+      "vendor": "greenhouse",
+      "slug": "asteralabs",
+      "job_count_at_catalog_check": 180,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/asteralabs"
+    },
+    {
+      "name": "Zocks",
+      "vendor": "lever",
+      "slug": "zocks",
+      "job_count_at_catalog_check": 22,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/zocks"
+    },
+    {
+      "name": "Artefact",
+      "vendor": "greenhouse",
+      "slug": "artefact",
+      "job_count_at_catalog_check": 146,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/artefact"
+    },
+    {
+      "name": "Ad Lightning",
+      "vendor": "greenhouse",
+      "slug": "adlightning",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/adlightning"
+    },
+    {
+      "name": "Divergent (Confidential)",
+      "vendor": "greenhouse",
+      "slug": "dti",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/dti"
+    },
+    {
+      "name": "legalservicesnyc",
+      "vendor": "greenhouse",
+      "slug": "legalservicesnyc",
+      "job_count_at_catalog_check": 21,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/legalservicesnyc"
+    },
+    {
+      "name": "Solestial, Inc.",
+      "vendor": "lever",
+      "slug": "solestial",
+      "job_count_at_catalog_check": 8,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/solestial"
+    },
+    {
+      "name": "DRC",
+      "vendor": "greenhouse",
+      "slug": "drc",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/drc"
+    },
+    {
+      "name": "Waterworks",
+      "vendor": "lever",
+      "slug": "waterworks",
+      "job_count_at_catalog_check": 25,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/waterworks"
+    },
+    {
+      "name": "Care Access",
+      "vendor": "greenhouse",
+      "slug": "careaccess",
+      "job_count_at_catalog_check": 40,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/careaccess"
+    },
+    {
+      "name": "PEXA Group",
+      "vendor": "lever",
+      "slug": "pexa",
+      "job_count_at_catalog_check": 6,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/pexa"
+    },
+    {
+      "name": "Red Cell Partners",
+      "vendor": "greenhouse",
+      "slug": "redcellpartners",
+      "job_count_at_catalog_check": 30,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/redcellpartners"
+    },
+    {
+      "name": "Chrome Industries",
+      "vendor": "greenhouse",
+      "slug": "chromeindustries",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/chromeindustries"
+    },
+    {
+      "name": "ACI Learning",
+      "vendor": "greenhouse",
+      "slug": "acilearning",
+      "job_count_at_catalog_check": 4,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/acilearning"
+    },
+    {
+      "name": "NextDecade",
+      "vendor": "lever",
+      "slug": "next-decade",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/next-decade"
+    },
+    {
+      "name": "Electric Mind",
+      "vendor": "lever",
+      "slug": "electricmind",
+      "job_count_at_catalog_check": 15,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/electricmind"
+    },
+    {
+      "name": "sandstonecarebroomfield",
+      "vendor": "greenhouse",
+      "slug": "sandstonecarebroomfield",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/sandstonecarebroomfield"
+    },
+    {
+      "name": "Public",
+      "vendor": "greenhouse",
+      "slug": "public",
+      "job_count_at_catalog_check": 3,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/public"
+    },
+    {
+      "name": "Careers at Libra Group",
+      "vendor": "greenhouse",
+      "slug": "thelibragroup",
+      "job_count_at_catalog_check": 8,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/thelibragroup"
+    },
+    {
+      "name": "Succession Planning for Railroads Investing in the Next Generation LLC",
+      "vendor": "lever",
+      "slug": "springrecruits",
+      "job_count_at_catalog_check": 16,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/springrecruits"
+    },
+    {
+      "name": "kalvistapharmaceuticals",
+      "vendor": "greenhouse",
+      "slug": "kalvistapharmaceuticals",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/kalvistapharmaceuticals"
+    },
+    {
+      "name": "Qualia",
+      "vendor": "greenhouse",
+      "slug": "qualia",
+      "job_count_at_catalog_check": 9,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/qualia"
+    },
+    {
+      "name": "lpc",
+      "vendor": "greenhouse",
+      "slug": "lpc",
+      "job_count_at_catalog_check": 111,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/lpc"
+    },
+    {
+      "name": "Osano",
+      "vendor": "greenhouse",
+      "slug": "osano",
+      "job_count_at_catalog_check": 11,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/osano"
+    },
+    {
+      "name": "ANA",
+      "vendor": "lever",
+      "slug": "ana-corp",
+      "job_count_at_catalog_check": 25,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/ana-corp"
+    },
+    {
+      "name": "Akuna Capital Options Trading 201 Course",
+      "vendor": "greenhouse",
+      "slug": "optionstrading201course",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/optionstrading201course"
+    },
+    {
+      "name": "Jobs have moved to our Accenture Job Site",
+      "vendor": "lever",
+      "slug": "pip",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/pip"
+    },
+    {
+      "name": "SkyGrid",
+      "vendor": "lever",
+      "slug": "skygrid",
+      "job_count_at_catalog_check": 4,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/skygrid"
+    },
+    {
+      "name": "Ernest",
+      "vendor": "greenhouse",
+      "slug": "ernestpackagingsolutions",
+      "job_count_at_catalog_check": 41,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/ernestpackagingsolutions"
+    },
+    {
+      "name": "Doximity",
+      "vendor": "greenhouse",
+      "slug": "doximity",
+      "job_count_at_catalog_check": 11,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/doximity"
+    },
+    {
+      "name": "knightedgaming",
+      "vendor": "greenhouse",
+      "slug": "knightedgaming",
+      "job_count_at_catalog_check": 12,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/knightedgaming"
+    },
+    {
+      "name": "Alpha FMC - Asset and Wealth Management Consulting - Europe",
+      "vendor": "greenhouse",
+      "slug": "alphaawmeur",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/alphaawmeur"
+    },
+    {
+      "name": "Unispace",
+      "vendor": "greenhouse",
+      "slug": "unispace",
+      "job_count_at_catalog_check": 9,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/unispace"
+    },
+    {
+      "name": "mark43",
+      "vendor": "greenhouse",
+      "slug": "mark43",
+      "job_count_at_catalog_check": 34,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/mark43"
+    },
+    {
+      "name": "Luster National",
+      "vendor": "greenhouse",
+      "slug": "lusternational",
+      "job_count_at_catalog_check": 86,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/lusternational"
+    },
+    {
+      "name": "Easygo",
+      "vendor": "greenhouse",
+      "slug": "easygo",
+      "job_count_at_catalog_check": 29,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/easygo"
+    },
+    {
+      "name": "Proton",
+      "vendor": "greenhouse",
+      "slug": "proton",
+      "job_count_at_catalog_check": 13,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/proton"
+    },
+    {
+      "name": "Arable",
+      "vendor": "lever",
+      "slug": "arable",
+      "job_count_at_catalog_check": 3,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/arable"
+    },
+    {
+      "name": "Finster AI",
+      "vendor": "greenhouse",
+      "slug": "finsterai",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/finsterai"
+    },
+    {
+      "name": "Feld Entertainment",
+      "vendor": "lever",
+      "slug": "feldinc",
+      "job_count_at_catalog_check": 61,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/feldinc"
+    },
+    {
+      "name": "Anovium",
+      "vendor": "lever",
+      "slug": "Anovium",
+      "job_count_at_catalog_check": 13,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/Anovium"
+    },
+    {
+      "name": "One World Coders",
+      "vendor": "greenhouse",
+      "slug": "owc",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/owc"
+    },
+    {
+      "name": "Gauss Labs",
+      "vendor": "lever",
+      "slug": "gausslabs",
+      "job_count_at_catalog_check": 12,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/gausslabs"
+    },
+    {
+      "name": "BrightHire",
+      "vendor": "greenhouse",
+      "slug": "brighthire",
+      "job_count_at_catalog_check": 6,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/brighthire"
+    },
+    {
+      "name": "rightship",
+      "vendor": "greenhouse",
+      "slug": "rightship",
+      "job_count_at_catalog_check": 8,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/rightship"
+    },
+    {
+      "name": "Zilliz",
+      "vendor": "lever",
+      "slug": "zilliz",
+      "job_count_at_catalog_check": 12,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/zilliz"
+    },
+    {
+      "name": "Graylog, Inc",
+      "vendor": "lever",
+      "slug": "graylog",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/graylog"
+    },
+    {
+      "name": "Faropoint",
+      "vendor": "greenhouse",
+      "slug": "faropoint",
+      "job_count_at_catalog_check": 14,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/faropoint"
+    },
+    {
+      "name": "Quantum Metric",
+      "vendor": "lever",
+      "slug": "quantummetric",
+      "job_count_at_catalog_check": 7,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/quantummetric"
+    },
+    {
+      "name": "You.com",
+      "vendor": "greenhouse",
+      "slug": "youcom",
+      "job_count_at_catalog_check": 9,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/youcom"
+    },
+    {
+      "name": "WePractice (Head Quarter)",
+      "vendor": "greenhouse",
+      "slug": "headquarter",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/headquarter"
+    },
+    {
+      "name": "Nimble Gravity",
+      "vendor": "greenhouse",
+      "slug": "nimblegravity",
+      "job_count_at_catalog_check": 13,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/nimblegravity"
+    },
+    {
+      "name": "Action Garage Doors",
+      "vendor": "greenhouse",
+      "slug": "action",
+      "job_count_at_catalog_check": 11,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/action"
+    },
+    {
+      "name": "PDQ Doors",
+      "vendor": "greenhouse",
+      "slug": "pdq",
+      "job_count_at_catalog_check": 4,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/pdq"
+    },
+    {
+      "name": "newsweaver",
+      "vendor": "greenhouse",
+      "slug": "newsweaver",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/newsweaver"
+    },
+    {
+      "name": "Samba",
+      "vendor": "lever",
+      "slug": "sambatv",
+      "job_count_at_catalog_check": 61,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/sambatv"
+    },
+    {
+      "name": "NodeReal",
+      "vendor": "lever",
+      "slug": "nodereal",
+      "job_count_at_catalog_check": 0,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/nodereal"
+    },
+    {
+      "name": "Cadence Health",
+      "vendor": "greenhouse",
+      "slug": "cadencehealth",
+      "job_count_at_catalog_check": 21,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/cadencehealth"
+    },
+    {
+      "name": "Every Cure",
+      "vendor": "greenhouse",
+      "slug": "everycure",
+      "job_count_at_catalog_check": 2,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/everycure"
+    },
+    {
+      "name": "Wingtra AG",
+      "vendor": "lever",
+      "slug": "wingtra-2",
+      "job_count_at_catalog_check": 7,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/wingtra-2"
+    },
+    {
+      "name": "WOO X",
+      "vendor": "greenhouse",
+      "slug": "woo",
+      "job_count_at_catalog_check": 2,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/woo"
+    },
+    {
+      "name": "thebrandagency",
+      "vendor": "greenhouse",
+      "slug": "thebrandagency",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/thebrandagency"
+    },
+    {
+      "name": "The Engine",
+      "vendor": "lever",
+      "slug": "engine",
+      "job_count_at_catalog_check": 3,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/engine"
+    },
+    {
+      "name": "shednycinc",
+      "vendor": "greenhouse",
+      "slug": "shednycinc",
+      "job_count_at_catalog_check": 6,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/shednycinc"
+    },
+    {
+      "name": "BGW",
+      "vendor": "greenhouse",
+      "slug": "bgw",
+      "job_count_at_catalog_check": 1,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/bgw"
+    },
+    {
+      "name": "Blue Moon Metals",
+      "vendor": "greenhouse",
+      "slug": "bluemoonmetals",
+      "job_count_at_catalog_check": 34,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://job-boards.greenhouse.io/bluemoonmetals"
+    },
+    {
+      "name": "New Western",
+      "vendor": "lever",
+      "slug": "newwestern",
+      "job_count_at_catalog_check": 29,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/newwestern"
+    },
+    {
+      "name": "Atavistik Bio",
+      "vendor": "lever",
+      "slug": "atavistik-bio",
+      "job_count_at_catalog_check": 2,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/atavistik-bio"
+    },
+    {
+      "name": "Drivetrain",
+      "vendor": "lever",
+      "slug": "drivetrain",
+      "job_count_at_catalog_check": 35,
+      "verified_at": "2026-11-02",
+      "careers_url": "https://jobs.lever.co/drivetrain"
+    }
+  ]
+}
