@@ -65,3 +65,20 @@
 :root[data-theme="dark"] .toast{background:#d8f279;color:#172018}
 :root[data-theme="dark"] ::selection{background:#d8f279;color:#172018}
 @media(max-width:480px){.theme-toggle{padding:7px!important}.theme-toggle #theme-label{display:none}.top-right{gap:7px}}
+
+/* Warm coral red adds contrast to key actions without competing with live-data green. */
+:root[data-theme="dark"] .hero h1 em,:root[data-theme="dark"] .brandmark{color:#f27c75}
+:root[data-theme="dark"] .submit{background:#b94342;color:#fff5f2;box-shadow:0 6px 18px #b9434230}
+:root[data-theme="dark"] .submit:hover{background:#d35450}
+:root[data-theme="dark"] .theme-toggle{border-color:#563638}
+:root[data-theme="dark"] .theme-toggle:hover{border-color:#a84b4a;background:#302122}
+:root[data-theme="dark"] .theme-icon{color:#ff837c}
+:root[data-theme="dark"] .field input:focus,:root[data-theme="dark"] .field select:focus,:root[data-theme="dark"] .skills-input input:focus,:root[data-theme="dark"] .directory-tools input:focus,:root[data-theme="dark"] #account-auth-form input:focus{border-color:#ef716b;box-shadow:0 1px 0 #ef716b}
+:root[data-theme="dark"] .panel-icon{background:#382224;color:#ff8a83}
+:root[data-theme="dark"] .role-brief{background:linear-gradient(135deg,#1d1a1b 0%,#241b1c 62%,#302022 100%);border-color:#493033}
+:root[data-theme="dark"] .role-brief:after,:root[data-theme="dark"] .brief-columns li+li,:root[data-theme="dark"] .role-brief .panel-title{border-color:#513437}
+:root[data-theme="dark"] .brief-mark{color:#f27c75}
+:root[data-theme="dark"] .compare-toggle:hover,:root[data-theme="dark"] .compare-toggle.selected{background:#b94342;border-color:#b94342;color:#fff5f2}
+:root[data-theme="dark"] .comparison-cell.demand strong{color:#ff8a83}
+:root[data-theme="dark"] .career-link:hover,:root[data-theme="dark"] .company-links a:hover,:root[data-theme="dark"] .company-insights a:hover,:root[data-theme="dark"] .comparison-cell a:hover,:root[data-theme="dark"] .result-foot a:hover{color:#ff918a}
+:root[data-theme="dark"] .remove-company:hover{border-color:#754442;color:#ff918a}
