@@ -16,7 +16,7 @@ import time
 import http.cookies
 import urllib.parse
 import urllib.request
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, wait
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -37,8 +37,10 @@ BOARD_CACHE = {}
 BOARD_CACHE_LOCK = threading.Lock()
 BOARD_CACHE_TTL = 15 * 60
 BOARD_CACHE_TTL_SECONDS = BOARD_CACHE_TTL
-BOARD_REQUEST_TIMEOUT = 8
-BOARD_WORKERS = 28
+BOARD_REQUEST_TIMEOUT = 3
+BOARD_MAX_RESPONSE_BYTES = 2_500_000
+BOARD_WORKERS = 16
+SEARCH_TIME_BUDGET_SECONDS = 18
 DATA_DIR = Path(os.getenv("CAREER_SIGNAL_DATA_DIR", str(ROOT))).expanduser()
 TREND_HISTORY_PATH = DATA_DIR / "market_history.json"
 TREND_HISTORY_LOCK = threading.Lock()
@@ -110,8 +112,9 @@ def normalize_board_jobs(source, payload):
         jobs.append({"title":item.get("title", "Role"),"company":source["name"],"location":location or "Location not listed","description":description,"url":url,"created":created,"date_label":date_label,"salary_min":salary_min,"salary_max":salary_max,"currency":currency,"team":team,"employment_type":employment_type,"board":source["careers_url"],"provider":vendor.title()})
     return jobs
 
-def fetch_board(source, force=False):
-    key = (source["vendor"], source["slug"])
+def fetch_board(source, force=False, role=None):
+    query_key = (role or "").strip().casefold()
+    key = (source["vendor"], source["slug"], query_key)
     now = time.monotonic()
     with BOARD_CACHE_LOCK:
         cached = BOARD_CACHE.get(key)
@@ -120,13 +123,21 @@ def fetch_board(source, force=False):
     request = urllib.request.Request(board_endpoint(source), headers={"Accept":"application/json","User-Agent":"CareerSignal/1.0 (public employer job-board reader)"})
     try:
         with urllib.request.urlopen(request, timeout=BOARD_REQUEST_TIMEOUT) as response:
-            payload = json.loads(response.read().decode("utf-8"))
+            body = response.read(BOARD_MAX_RESPONSE_BYTES + 1)
+        if len(body) > BOARD_MAX_RESPONSE_BYTES:
+            raise ValueError("Employer feed exceeds the response-size limit")
+        payload = json.loads(body.decode("utf-8"))
         jobs = normalize_board_jobs(source, payload)
+        if role:
+            jobs = [job for job in jobs if role_matches(job, role)]
         result = {"ok":True,"jobs":jobs,"cached_at":time.monotonic(),"checked_at":datetime.now(timezone.utc).isoformat()}
     except Exception as exc:
         result = {"ok":False,"jobs":[],"cached_at":time.monotonic(),"checked_at":datetime.now(timezone.utc).isoformat(),"error":str(exc)[:180]}
-    with BOARD_CACHE_LOCK:
-        BOARD_CACHE[key] = result
+    if result["ok"]:
+        with BOARD_CACHE_LOCK:
+            if len(BOARD_CACHE) >= 4000:
+                BOARD_CACHE.pop(next(iter(BOARD_CACHE)))
+            BOARD_CACHE[key] = result
     return result
 
 COUNTRY_NAMES = {"in":["india"],"us":["united states","usa","u.s."],"gb":["united kingdom","uk","great britain"],"ca":["canada"],"au":["australia"],"de":["germany"],"fr":["france"],"nl":["netherlands"],"sg":["singapore"],"za":["south africa"]}
@@ -284,40 +295,28 @@ def search_jobs(role="Data Analyst", location="India", country="in", page=1, res
     good_sources = set()
     feed_times = []
     failed_sources = []
-    # Refresh every employer feed in parallel. Each feed is cached briefly to keep search responsive.
-    with ThreadPoolExecutor(max_workers=BOARD_WORKERS) as pool:
-        futures = {pool.submit(fetch_board, source, force):source for source in sources}
-        for future in as_completed(futures):
-            source = futures[future]
-            try:
-                feed = future.result()
-            except Exception:
+    # Search the feeds in parallel, but stop before the host's request and memory limits.
+    pool = ThreadPoolExecutor(max_workers=BOARD_WORKERS)
+    futures = {pool.submit(fetch_board, source, force, role):source for source in sources}
+    done, pending = wait(futures, timeout=SEARCH_TIME_BUDGET_SECONDS)
+    for future in done:
+        source = futures[future]
+        try:
+            feed = future.result()
+        except Exception:
+            failed_sources.append(source)
+            continue
+        if not feed["ok"]:
+            if "HTTP Error 404" not in feed.get("error", ""):
                 failed_sources.append(source)
-                continue
-            if not feed["ok"]:
-                if "HTTP Error 404" not in feed.get("error", ""):
-                    failed_sources.append(source)
-                continue
-            good_sources.add((source["vendor"], source["slug"]))
-            feed_times.append(feed["checked_at"])
-            gathered.extend(feed["jobs"])
-    # A second, smaller pass clears transient throttles/timeouts without hammering the boards.
-    if failed_sources:
-        time.sleep(0.5)
-        with ThreadPoolExecutor(max_workers=min(8,len(failed_sources))) as pool:
-            retries={pool.submit(fetch_board,source,True):source for source in failed_sources}
-            for future in as_completed(retries):
-                source=retries[future]
-                try:
-                    feed=future.result()
-                except Exception:
-                    continue
-                if not feed["ok"]:
-                    continue
-                good_sources.add((source["vendor"],source["slug"]))
-                feed_times.append(feed["checked_at"])
-                gathered.extend(feed["jobs"])
-    failures=len(sources)-len(good_sources)
+            continue
+        good_sources.add((source["vendor"], source["slug"]))
+        feed_times.append(feed["checked_at"])
+        gathered.extend(feed["jobs"])
+    for future in pending:
+        future.cancel()
+    pool.shutdown(wait=False, cancel_futures=True)
+    failures=len(done)-len(good_sources)
     if not good_sources and sources:
         raise RuntimeError("Could not reach the employer career feeds. Check your internet connection and try refreshing.")
     matches = [job for job in gathered if role_matches(job, role) and location_matches(job, location, country)]
@@ -329,10 +328,12 @@ def search_jobs(role="Data Analyst", location="India", country="in", page=1, res
     matches.sort(key=lambda j: j.get("created", ""), reverse=True)
     checked_at = datetime.now(timezone.utc).isoformat()
     note = f"Live postings read from {len(good_sources)} of {len(sources)} employer boards. Links open the employer's hosted posting. Remote listings without an eligible country may need confirmation on the employer page."
-    if failures:
-        note += f" {failures} boards could not be reached on this refresh."
     if not matches:
         note = f"No open {role} postings matched {location} across {len(good_sources)} reachable employer boards. Try another role or location."
+    if failures:
+        note += f" {failures} completed feeds could not be reached on this refresh."
+    if pending:
+        note += f" {len(pending)} boards were still responding; refresh shortly to pick up additional results."
     feed_updated_at=min(feed_times) if feed_times else checked_at
     return {"jobs":matches[:results],"_analysis_jobs":matches,"total":len(matches),"source":"employer_boards","source_count":len(sources),"boards_checked":len(good_sources),"updated_at":feed_updated_at,"notice":note}
 
@@ -380,7 +381,7 @@ def analyze_market(role="Data Analyst", location="India", country="in", user_ski
         linkedin_jobs_q=urllib.parse.urlencode({"keywords":source["name"],"location":li_location})
         teams=sorted({j.get("team","") for j in company_full if j.get("team")})
         types=sorted({j.get("employment_type","") for j in company_full if j.get("employment_type")})
-        company_pages.append({"name":source["name"],"provider":"Official career site" if source["vendor"]=="external" else source["vendor"].title(),"company_type":source.get("company_type","Employer"),"sector":source.get("sector",""),"career_site_only":source["vendor"]=="external","careers_url":source["careers_url"],"matching_count":len(company_jobs),"jobs":company_jobs,"locations":active_locations[:8],"linkedin_market_location":li_location,"linkedin_company_search_url":"https://www.linkedin.com/search/results/companies/?"+linkedin_company_q,"linkedin_jobs_url":"https://www.linkedin.com/jobs/search/?"+linkedin_jobs_q,"hiring_teams":teams[:6],"employment_types":types[:4],"pay":salary_summary(company_full),"skills":company_skill_counts[:5],"skill_evidence":company_skill_evidence,"skill_evidence_status":"live_postings" if company_full else "no_live_postings","progression":company_role_progression(company_full),"layoff_url":"https://news.google.com/search?"+layoffs_q})
+        company_pages.append({"name":source["name"],"provider":"Official career site" if source["vendor"]=="external" else source["vendor"].title(),"company_type":source.get("company_type","Employer"),"sector":source.get("sector",""),"career_site_only":source["vendor"]=="external","careers_url":source["careers_url"],"matching_count":len(company_full),"jobs":company_jobs[:6],"locations":active_locations[:8],"linkedin_market_location":li_location,"linkedin_company_search_url":"https://www.linkedin.com/search/results/companies/?"+linkedin_company_q,"linkedin_jobs_url":"https://www.linkedin.com/jobs/search/?"+linkedin_jobs_q,"hiring_teams":teams[:6],"employment_types":types[:4],"pay":salary_summary(company_full),"skills":company_skill_counts[:5],"skill_evidence":company_skill_evidence,"skill_evidence_status":"live_postings" if company_full else "no_live_postings","progression":company_role_progression(company_full),"layoff_url":"https://news.google.com/search?"+layoffs_q})
     trend_note=record_market_snapshot(role,location,country,result.get("total",len(jobs)),counts)
     return {**result,"role":role,"location":location,"job_count":result.get("total",len(jobs)),"skills":counts[:10],"gaps":gaps[:8],"roadmap":roadmap,"trend_note":trend_note,"company_pages":company_pages,"salary_market":salary_market,"role_brief":role_brief(role,jobs,counts)}
 
