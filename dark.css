@@ -1,0 +1,67 @@
+/* Career Signal dark theme: charcoal canvas, layered evergreen panels, sage and lime accents. */
+:root[data-theme="dark"]{color-scheme:dark;--paper:#101512;--ink:#e8efe8;--muted:#a1ada2;--green:#a4c5a5;--lime:#d8f279;--line:#2b3730;--white:#18201b}
+:root[data-theme="dark"] body{background:#101512;color:#e8efe8}
+:root[data-theme="dark"] .topbar,:root[data-theme="dark"] .how,:root[data-theme="dark"] .site-foot{border-color:#29352e}
+:root[data-theme="dark"] .brand-light,:root[data-theme="dark"] .top-right,:root[data-theme="dark"] .intro,:root[data-theme="dark"] .trust,:root[data-theme="dark"] .result-head p,:root[data-theme="dark"] .result-head h2 span,:root[data-theme="dark"] .panel-title p,:root[data-theme="dark"] .stat-detail,:root[data-theme="dark"] .result-foot,:root[data-theme="dark"] .how>div>span:last-child,:root[data-theme="dark"] .site-foot{color:#9ca99e}
+:root[data-theme="dark"] .live-dot{box-shadow:0 0 0 3px #26382b}
+:root[data-theme="dark"] .avatar{background:#29382e;color:#e3f0dc}
+:root[data-theme="dark"] .avatar:hover{background:#35483a}
+:root[data-theme="dark"] .search-card,:root[data-theme="dark"] .stat,:root[data-theme="dark"] .panel,:root[data-theme="dark"] .company-card,:root[data-theme="dark"] .comparison-company,:root[data-theme="dark"] .company-insights>div,:root[data-theme="dark"] .company-context>div,:root[data-theme="dark"] .skill-evidence-list article,:root[data-theme="dark"] .comparison-empty{background:#18201b;border-color:#2b3730;box-shadow:none;color:#e8efe8}
+:root[data-theme="dark"] .search-card{box-shadow:0 16px 40px #0005}
+:root[data-theme="dark"] .field input,:root[data-theme="dark"] .field select,:root[data-theme="dark"] .skills-input input,:root[data-theme="dark"] .directory-tools input,:root[data-theme="dark"] #account-auth-form input{color:#edf3ec;border-color:#344139}
+:root[data-theme="dark"] .field input::placeholder,:root[data-theme="dark"] .skills-input input::placeholder,:root[data-theme="dark"] .directory-tools input::placeholder,:root[data-theme="dark"] #account-auth-form input::placeholder{color:#758278}
+:root[data-theme="dark"] .field select{background:linear-gradient(45deg,transparent 50%,#aab7ac 50%) calc(100% - 5px) 5px/5px 5px no-repeat,linear-gradient(135deg,#aab7ac 50%,transparent 50%) 100% 5px/5px 5px no-repeat}
+:root[data-theme="dark"] .field-label,:root[data-theme="dark"] .optional,:root[data-theme="dark"] .company-provider,:root[data-theme="dark"] .company-locations>span,:root[data-theme="dark"] .company-insights span,:root[data-theme="dark"] .company-context span,:root[data-theme="dark"] .profile-summary span{color:#94a194}
+:root[data-theme="dark"] .submit{background:#a7c9a3;color:#142016}
+:root[data-theme="dark"] .submit:hover{background:#c0dcb2}
+.theme-toggle{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid #e0e7dc;border-radius:999px;background:#fff;color:#586558;font:10px 'DM Mono',monospace;cursor:pointer;transition:background .18s,border-color .18s,color .18s}
+.theme-toggle:hover{background:#f0f5ed;border-color:#afc1ad;color:#36563e}
+.theme-icon{font:16px/1 Manrope,sans-serif;color:#547657}
+:root[data-theme="dark"] .theme-toggle{border-color:#364339;background:#1a221d;color:#c5d4c6}
+:root[data-theme="dark"] .theme-toggle:hover{background:#253129;border-color:#607764;color:#e7f3e5}
+:root[data-theme="dark"] .theme-icon{color:#d8f279}
+:root[data-theme="dark"] .refresh,:root[data-theme="dark"] .remove-company,:root[data-theme="dark"] .account-create,:root[data-theme="dark"] .account-logout,:root[data-theme="dark"] .dialog-close{background:#1d2721;border-color:#344139;color:#c4d0c5}
+:root[data-theme="dark"] .refresh:hover,:root[data-theme="dark"] .remove-company:hover,:root[data-theme="dark"] .account-create:hover,:root[data-theme="dark"] .account-logout:hover,:root[data-theme="dark"] .dialog-close:hover{background:#28352d;color:#f0f5ef}
+:root[data-theme="dark"] .notice{background:#222b23;color:#bdc9b3}
+:root[data-theme="dark"] .notice.live{background:#1e3023;color:#b4d3b0}
+:root[data-theme="dark"] .notice.error{background:#352620;color:#f0b69b}
+:root[data-theme="dark"] .stat-label,:root[data-theme="dark"] .skill-name,:root[data-theme="dark"] .brief-columns h4,:root[data-theme="dark"] .company-job div,:root[data-theme="dark"] .company-skill-evidence>summary,:root[data-theme="dark"] .comparison-cell b{color:#dce6dc}
+:root[data-theme="dark"] .panel-icon,:root[data-theme="dark"] .duration,:root[data-theme="dark"] .company-locations i{background:#26352a;color:#b8d8b2}
+:root[data-theme="dark"] .bar-track{background:#29332c}
+:root[data-theme="dark"] .bar{background:#718d75}
+:root[data-theme="dark"] .bar.first{background:#b4d5aa}
+:root[data-theme="dark"] .skill-n,:root[data-theme="dark"] .data-note,:root[data-theme="dark"] .road-step p,:root[data-theme="dark"] .job p,:root[data-theme="dark"] .company-job span,:root[data-theme="dark"] .brief-columns p,:root[data-theme="dark"] .brief-columns li,:root[data-theme="dark"] .company-insights small,:root[data-theme="dark"] .comparison-cell small,:root[data-theme="dark"] .company-skill-evidence>p,:root[data-theme="dark"] .skill-evidence-intro,:root[data-theme="dark"] .skill-evidence-head span{color:#9ca99e}
+:root[data-theme="dark"] .road-step,:root[data-theme="dark"] .job,:root[data-theme="dark"] .company-job,:root[data-theme="dark"] .company-insights>div,:root[data-theme="dark"] .company-context>div,:root[data-theme="dark"] .skill-evidence-list article,:root[data-theme="dark"] .comparison-cell,:root[data-theme="dark"] .company-skill-evidence{border-color:#2d3932}
+:root[data-theme="dark"] .week,:root[data-theme="dark"] .gap-tag,:root[data-theme="dark"] .project,:root[data-theme="dark"] .jobs-count,:root[data-theme="dark"] .company-matches,:root[data-theme="dark"] .career-link,:root[data-theme="dark"] .company-links a,:root[data-theme="dark"] .company-insights a,:root[data-theme="dark"] .comparison-cell a,:root[data-theme="dark"] .result-foot a{color:#a9caa7}
+:root[data-theme="dark"] .road-step,:root[data-theme="dark"] .company-card summary{background:#18201b}
+:root[data-theme="dark"] .company-card summary:hover{background:#202b24}
+:root[data-theme="dark"] .company-details,:root[data-theme="dark"] .company-skill-evidence>summary,:root[data-theme="dark"] .company-skill-evidence[open]>summary{border-color:#2b3730}
+:root[data-theme="dark"] .company-matches{color:#c4dda9}
+:root[data-theme="dark"] .compare-toggle{background:#1e2b22;border-color:#394b3c;color:#c0d7bb}
+:root[data-theme="dark"] .compare-toggle:hover,:root[data-theme="dark"] .compare-toggle.selected{background:#a7c9a3;border-color:#a7c9a3;color:#172119}
+:root[data-theme="dark"] .compare-toggle:disabled{background:#222a24;border-color:#303a33;color:#859188}
+:root[data-theme="dark"] .role-brief{background:linear-gradient(135deg,#19231d 0%,#1a241e 62%,#202d22 100%);border-color:#324236}
+:root[data-theme="dark"] .role-brief:after{border-color:#506552}
+:root[data-theme="dark"] .brief-mark{color:#b9d4b2}
+:root[data-theme="dark"] .brief-columns li+li,:root[data-theme="dark"] .role-brief .panel-title{border-color:#354239}
+:root[data-theme="dark"] .compare-facets span{background:#222c25;color:#a8b7a8}
+:root[data-theme="dark"] .comparison-grid{background:#2b3730}
+:root[data-theme="dark"] .comparison-cell.demand strong{color:#d8f279}
+:root[data-theme="dark"] .company-links a:hover,:root[data-theme="dark"] .company-insights a:hover{color:#d8f279}
+:root[data-theme="dark"] .company-skill-evidence>summary:after,:root[data-theme="dark"] .company-card summary:after{color:#a9caa7}
+:root[data-theme="dark"] .skill-evidence-list blockquote{border-color:#405143;background:#1d2821;color:#cbd7cb}
+:root[data-theme="dark"] .skill-evidence-list blockquote small{color:#98a69a}
+:root[data-theme="dark"] .skill-signal-tags i{background:#26312a;color:#b9c8bb}
+:root[data-theme="dark"] .skill-signal-tags i.required-tag{background:#3a2924;color:#efb29a}
+:root[data-theme="dark"] .skill-signal-tags i.preferred-tag{background:#343020;color:#e1d08b}
+:root[data-theme="dark"] .sample-chip{background:#332d1d;color:#dfca8d}
+:root[data-theme="dark"] .account-dialog{background:#171f1a;border-color:#344139;color:#e8efe8;box-shadow:0 24px 80px #0009}
+:root[data-theme="dark"] .account-dialog::backdrop{background:#030705b8}
+:root[data-theme="dark"] .account-dialog-head{border-color:#2b3730}
+:root[data-theme="dark"] .account-copy,:root[data-theme="dark"] .account-footnote,:root[data-theme="dark"] .account-dialog label,:root[data-theme="dark"] .signed-in-email{color:#aab7ac}
+:root[data-theme="dark"] .profile-summary{background:#202a23;border-color:#344139}
+:root[data-theme="dark"] .profile-summary b{color:#e2ece1}
+:root[data-theme="dark"] .account-message{color:#f0b69b}
+:root[data-theme="dark"] .toast{background:#d8f279;color:#172018}
+:root[data-theme="dark"] ::selection{background:#d8f279;color:#172018}
+@media(max-width:480px){.theme-toggle{padding:7px!important}.theme-toggle #theme-label{display:none}.top-right{gap:7px}}

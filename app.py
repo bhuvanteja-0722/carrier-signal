@@ -468,7 +468,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json({"error":str(exc),"hint":"Check API credentials, country code, and connection."})
         if self.path=="/" or self.path=="/index.html":
             data=(ROOT/"index.html").read_bytes(); self.send_response(200); self.send_header("Content-Type","text/html; charset=utf-8"); self.send_header("Content-Security-Policy","default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"); self.send_header("X-Content-Type-Options","nosniff"); self.send_header("X-Frame-Options","DENY"); self.send_header("Referrer-Policy","strict-origin-when-cross-origin"); self.send_header("Cache-Control","no-store"); self.send_header("Content-Length",str(len(data))); self.end_headers(); self.wfile.write(data); return
-        if self.path=="/style.css" or self.path=="/app.js":
+        if self.path=="/style.css" or self.path=="/dark.css" or self.path=="/app.js" or self.path=="/theme.js":
             name=self.path[1:]; data=(ROOT/name).read_bytes(); self.send_response(200); self.send_header("Content-Type","text/css; charset=utf-8" if name.endswith("css") else "application/javascript; charset=utf-8"); self.send_header("X-Content-Type-Options","nosniff"); self.send_header("X-Frame-Options","DENY"); self.send_header("Referrer-Policy","strict-origin-when-cross-origin"); self.send_header("Cache-Control","no-store"); self.send_header("Content-Length",str(len(data))); self.end_headers(); self.wfile.write(data); return
         self.send_error(404)
     def do_POST(self):
